@@ -1,1 +1,1 @@
-# AndroidKotlinTestApp
+# AndroidKotlinApp
