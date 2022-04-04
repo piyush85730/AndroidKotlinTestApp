@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="5dp"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgArticle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/detailArrow"
+        android:layout_toEndOf="@+id/imgArticle">
+
+        <TextView
+            android:id="@+id/tvArticleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/mulish_normal"
+            android:maxLines="2"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvArticleContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvArticleTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/mulish_normal"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/grey"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvArticleContent">
+
+            <TextView
+                android:id="@+id/tvArticlePublishedBy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvArticleDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textAlignment="textEnd"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/detailArrow"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_arrow" />
+</RelativeLayout>

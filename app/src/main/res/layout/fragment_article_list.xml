@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Adding the same root's ID for view binding as other layout configurations -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_list_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Articles"
+        app:titleTextAppearance="?android:attr/textAppearanceMedium"
+        app:titleTextColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_list"
+        android:name="com.demo.nytimes.ItemListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:labelFor="@+id/toolbar"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:context="com.demo.nytimes.ui.activities.MainActivity"
+        tools:listitem="@layout/article_list_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>
